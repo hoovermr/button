@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+<head>
+  {% block header %}
+    {{ super() }}
+  {% endblock %}
+</head>
+<body>
+{% block navbar %}
+  {{ super() }}
+{% endblock %}
+{% block body %}
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="mt-5">Here are all the tweets I can find with the hash-tag you provided:</h1>
+        <p>Note: I created a Twitter collection in your account of this data. Please remove it if you don't want it there.</p>
+        <a class="twitter-timeline" data-partner="tweetdeck" href="https://twitter.com/{{ user_id }}/timelines/{{ timeline_id.split("-")[1] }}?ref_src=twsrc%5Etfw">Tweets</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+</body>
+</html>

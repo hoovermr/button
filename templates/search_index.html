@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+<head>
+  {% block header %}
+    {{ super() }}
+  {% endblock %}
+</head>
+<body>
+{% block navbar %}
+  {{ super() }}
+{% endblock %}
+{% block body %}
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="mt-5">Search by Connection</h1>
+        <p class="lead">An end point that searches for posts by a Twitter username.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+          <form role="form" action="/conn_search.html" method="post">
+              <div class="input-group">
+                <input type="text" class="form-control input-sm" name="user_id" placeholder="Enter username..." required>
+                <span class="input-group-btn">
+                    <button class="btn btn-default btn-sm" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+              </div>
+          </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="mt-5">Search by Date/Time</h1>
+        <p class="lead">An end point that searches for authenticated user's tweets by date & time.</p>
+        <p>Usage: "[from_date] - [to_date]" in MM/DD/YYYY HH:mm format. Limited to the last 30 days</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+          <form role="form" action="/date_search.html" method="post">
+              <div class="input-group">
+                <input type="text" class="form-control input-sm" name="date" placeholder="Enter date range... ex: 04/08/2017 02:00 - 04/08/2017 05:00" required>
+                <span class="input-group-btn">
+                    <button class="btn btn-default btn-sm" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+              </div>
+          </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="mt-5">Search by Hash-tag</h1>
+        <p class="lead">An end point that searches across all of Twitter for relevant posts by hash-tag</p>
+        <p>Note: Limited to the last 7 days per Twitter search API.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+          <form role="form" action="/hash_search.html" method="post">
+              <div class="input-group">
+                <input type="text" class="form-control input-sm" name="hash_tag" placeholder="Enter hash-tag..." required>
+                <span class="input-group-btn">
+                    <button class="btn btn-default btn-sm" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+              </div>
+          </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+</body>
+</html>
