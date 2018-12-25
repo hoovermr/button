@@ -30,16 +30,21 @@ To do so, you will need to do the following:
 
 How to use
 ------------
-After authenticating with the app, simply select any of the three search methods. Detailed descriptions below:"
+After authenticating with the app, simply select any of the three search methods. Detailed descriptions below:
 
   1. Get all tweets by user id.
+  
     - This endpoint will search all available tweets by a user id that you specify in the search bar.
     - Any handle in twitter can be used here. i.e "@realDonaldTrump"
+    
   2. Get all tweets of the user between two dates.
+  
     - A date range can be entered in form.
     - The dates MUST be of the following syntax separated by a hyphen: "MM/DD/YYYY HH:mm"
     - Example search term: "12/22/2018 00:00 - 12/24/2018 00:00"
+    
   3. Get all tweets matching a hash-tag:
+  
     - This will search all of twitter for tweets including the hash-tag.
     - Hashtags are entered in the normal syntax. i.e "#Trump"
     
