@@ -14,6 +14,8 @@ General User Requirements
 You will need a Twitter account for which to authenticate with. Also, some of the functions are limited in scope to
 the account authenticated with, so a healthy amount of tweets is encouraged to search from!
 
+The app is designed to be run on desktop and not mobile web. Mobile web will work but the best experience will be on desktop.
+
 Installation
 ------------
 The application is currently hosted online at the following domain:
