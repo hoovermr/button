@@ -9,8 +9,10 @@ application.secret_key = urandom(24)
 
 CONSUMER_KEY = 'GjJDCmivMndTR6WJ7gPi1EDhX'
 CONSUMER_SECRET = 'nFRR3zTixaJbSOA6ik2Bp4jKWWCPsm0vMhflqVUWQDe1X2LLUx'
-# CALLBACK_URL = 'http://button-env.cw5embfpkq.us-east-2.elasticbeanstalk.com/callback'
-CALLBACK_URL = 'http://127.0.0.1:5000/callback'
+CALLBACK_URL = 'http://button-env.cw5embfpkq.us-east-2.elasticbeanstalk.com/callback'
+
+# Use localhost for DEBUG
+# CALLBACK_URL = 'http://127.0.0.1:5000/callback'
 
 
 @application.route('/')
